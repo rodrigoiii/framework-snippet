@@ -1,0 +1,39 @@
+<snippet>
+    <content><![CDATA[
+{% extends "${1:layout}.twig" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">Update ${2:Model}</h1>
+
+            <form role="form" method="POST" action="{{ path_for('${3:model}.edit', {id: ${3:model}.id}) }}">
+                {{ csrf.field | raw }}
+
+                <input type="hidden" name="_METHOD" value="PUT">
+
+                <div class="form-group has-feedback {{ errors ? errors.${4:column1} ? "has-error" : "has-success" }}">
+                    <label for="${4:column1}">${5:label}</label>
+                    <input type="text" name="${4:column1}" class="form-control" value="{{ oldInput.${4:column1} ?: ${3:model}.${4:column1} }}" autofocus>
+                    {% if errors %}
+                    <span class="glyphicon {{ errors.${4:column1} ? "glyphicon-remove" : "glyphicon-ok" }} form-control-feedback"></span>
+                    {% endif %}
+                    <span class="help-block">{{ errors.${4:column1} | first }}</span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Update ${1:Model}" class="btn btn-primary">
+                    <a href="{{ path_for('${3:model}.list') }}" class="btn btn-default">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>view-crud-edit</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework view crud edit</description>
+</snippet>

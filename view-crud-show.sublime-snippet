@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+{% extends "${1:layout}.twig" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">${2:Model} Info</h1>
+            <a href="{{ path_for('${3:model}.list') }}" class="btn btn-default">Back to ${3:model} list</a>
+            <br>
+            {{ ${3:model} | json_encode }}
+        </div>
+    </div>
+</div>
+{% endblock %}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>view-crud-show</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework view crud show</description>
+</snippet>

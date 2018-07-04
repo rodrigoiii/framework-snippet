@@ -1,0 +1,91 @@
+<snippet>
+    <content><![CDATA[
+{% extends "${1:layout}.twig" %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-header">${2:Model} list</h1>
+
+            <a href="{{ path_for('${3:model}.create') }}" class="btn btn-primary btn-sm">Create ${2:Model}</a>
+            <br><br>
+
+            {% include "templates/flash-message.twig" %}
+
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered table-striped" id="${3:model}-table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>${4:Column1}</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<form method="POST" id="delete-${3:model}-form">
+    {{ csrf.field | raw }}
+    <input type="hidden" name="_METHOD" value="DELETE">
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+\$(document).ready(function() {
+    \$('#${3:model}-table').on('click', '.delete-${3:model}', function(event) {
+        var route = \$(this).data('route');
+
+        bootbox.confirm("Are you sure you want to continue this action?", function(is_yes) {
+            if (is_yes)
+            {
+                \$('#delete-${3:model}-form').attr('action', route).submit();
+            }
+        });
+    });
+
+    \$('#${3:model}-table').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: \$.fn.dataTable.pipeline({
+            url: "{{ path_for('${3:model}.data') }}"
+        }),
+        columns: [
+            {data: "id"},
+            {data: ${5:column1}}
+            {
+                data: function (row, type, set) {
+                    var id = row.id;
+
+                    var tmpl = _.template(\$('#action-tmpl').html());
+
+                    return tmpl({
+                        view_url: "/${6:models}/" + id + "/show",
+                        edit_url: "/${6:models}/" + id + "/edit",
+                        delete_url: "/${6:models}/" + id + "/delete",
+                    });
+                }
+            }
+        ]
+    });
+});
+</script>
+
+<script type="text/template" id="action-tmpl">
+    <a href="<%= view_url  %>" class="btn btn-default btn-sm">View</a>
+    <a href="<%= edit_url %>" class="btn btn-success btn-sm">Edit</a>
+    <a href="javascript:void(0)" data-route="<%= delete_url %>" class="btn btn-danger btn-sm delete-${3:model}">Delete</a>
+</script>
+{% endblock %}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>view-crud-index</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework view crud index</description>
+</snippet>
