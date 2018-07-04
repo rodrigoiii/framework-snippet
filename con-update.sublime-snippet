@@ -1,0 +1,27 @@
+<snippet>
+    <content><![CDATA[
+    public function update(\$request, \$response, \$args)
+    {
+        \$id = \$args['id'];
+
+        if (!(new ${1:Request}(\$request))->isValid())
+        {
+            return \$response->withRedirect(\$this->router->pathFor('${2:router-fail-redirect}', compact('id')));
+        }
+
+        \$has_changed = ${3:Model}::_update(\$id, \$request->getParams());
+
+        flash(\$has_changed,
+            ['success' => "${4:success message}"],
+            ['warning' => "${5:fail message}"]
+        );
+
+        return \$response->withRedirect(\$this->router->pathFor('${6:router-redirect}'));
+    }
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>con-update</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework controller update</description>
+</snippet>

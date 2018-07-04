@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+    public function data(\$request, \$response)
+    {
+        \$data = \$request->getParams();
+        \$select = DB::table('${1:model}');
+        \$columns = ['id', '${2:column}'];
+
+        \$dataTable = new DataTable(\$data, \$select, \$columns);
+        return \$response->withJson(\$dataTable->getResponse());
+    }
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>con-data</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework controller data</description>
+</snippet>

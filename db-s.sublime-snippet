@@ -1,0 +1,24 @@
+<snippet>
+    <content><![CDATA[
+        \$faker = \Faker\Factory::create();
+
+        \$limit = 30;
+        \$data  = [];
+
+        for (\$i = 1; \$i <= \$limit; \$i++)
+        {
+            \$data[] = [
+                '${2:column1}' => \$faker->word()
+            ];
+
+            echo __CLASS__ . " => {\$i}/{\$limit}\n";
+        }
+
+        \$this->insert('${1:table}', \$data);
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>db-s</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework database seed</description>
+</snippet>

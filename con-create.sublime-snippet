@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+    public function create(\$request, \$response)
+    {
+        return \$this->view->render(\$response, "${1:twig-file}.twig");
+    }
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>con-create</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework controller create</description>
+</snippet>

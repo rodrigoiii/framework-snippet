@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+    public function delete(\$request, \$response, \$args)
+    {
+        flash(${1:Model}::destroy(\$args['id']),
+            ['success' => "${2:success message}"],
+            ['danger' => "${3:fail message}"]
+        );
+
+        return \$response->withRedirect(\$this->router->pathFor('${3:router-redirect}'));
+    }
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>con-delete</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework controller delete</description>
+</snippet>
