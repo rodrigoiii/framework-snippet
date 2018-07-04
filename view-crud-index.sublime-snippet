@@ -57,7 +57,7 @@
         }),
         columns: [
             {data: "id"},
-            {data: ${5:column1}}
+            {data: "${5:column1}"},
             {
                 data: function (row, type, set) {
                     var id = row.id;

@@ -23,13 +23,14 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="submit" value="Update ${1:Model}" class="btn btn-primary">
+                    <input type="submit" value="Update ${2:Model}" class="btn btn-primary">
                     <a href="{{ path_for('${3:model}.list') }}" class="btn btn-default">Cancel</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
+{% endblock %}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>view-crud-edit</tabTrigger>

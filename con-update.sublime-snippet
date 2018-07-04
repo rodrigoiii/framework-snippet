@@ -4,7 +4,7 @@
      * [update description]
      * @param  Psr\Http\Message\RequestInterface \$request
      * @param  Psr\Http\Message\ResponseInterface \$response
-     * @param  array $args
+     * @param  array \$args
      * @return mixed
      */
     public function update(\$request, \$response, \$args)

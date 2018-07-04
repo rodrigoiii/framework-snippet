@@ -4,12 +4,12 @@
      * [edit description]
      * @param  Psr\Http\Message\RequestInterface \$request
      * @param  Psr\Http\Message\ResponseInterface \$response
-     * @param  array $args
+     * @param  array \$args
      * @return mixed
      */
     public function edit(\$request, \$response, \$args)
     {
-        \$${1:model} = ${2:model}::find(\$args['id']);
+        \$${1:model} = ${2:Model}::find(\$args['id']);
         return \$this->view->render(\$response, "${3:twig-file}.twig", compact('${1:model}'));
     }
 ]]></content>

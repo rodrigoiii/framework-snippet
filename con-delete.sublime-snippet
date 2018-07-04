@@ -4,7 +4,7 @@
      * [delete description]
      * @param  Psr\Http\Message\RequestInterface \$request
      * @param  Psr\Http\Message\ResponseInterface \$response
-     * @param  array $args
+     * @param  array \$args
      * @return mixed
      */
     public function delete(\$request, \$response, \$args)
@@ -14,7 +14,7 @@
             ['danger' => "${3:fail message}"]
         );
 
-        return \$response->withRedirect(\$this->router->pathFor('${3:router-redirect}'));
+        return \$response->withRedirect(\$this->router->pathFor('${4:router-redirect}'));
     }
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
