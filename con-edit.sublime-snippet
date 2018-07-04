@@ -1,5 +1,12 @@
 <snippet>
     <content><![CDATA[
+    /**
+     * [edit description]
+     * @param  Psr\Http\Message\RequestInterface \$request
+     * @param  Psr\Http\Message\ResponseInterface \$response
+     * @param  array $args
+     * @return mixed
+     */
     public function edit(\$request, \$response, \$args)
     {
         \$${1:model} = ${2:model}::find(\$args['id']);

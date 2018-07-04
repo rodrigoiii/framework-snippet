@@ -1,5 +1,12 @@
 <snippet>
     <content><![CDATA[
+    /**
+     * [delete description]
+     * @param  Psr\Http\Message\RequestInterface \$request
+     * @param  Psr\Http\Message\ResponseInterface \$response
+     * @param  array $args
+     * @return mixed
+     */
     public function delete(\$request, \$response, \$args)
     {
         flash(${1:Model}::destroy(\$args['id']),

@@ -1,5 +1,12 @@
 <snippet>
     <content><![CDATA[
+    /**
+     * [show description]
+     * @param  Psr\Http\Message\RequestInterface \$request
+     * @param  Psr\Http\Message\ResponseInterface \$response
+     * @param  array $args
+     * @return mixed
+     */
     public function show(\$request, \$response, \$args)
     {
         \$${1:model} = ${2:Model}::find(\$args['id']);

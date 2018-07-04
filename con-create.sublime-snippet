@@ -1,5 +1,11 @@
 <snippet>
     <content><![CDATA[
+    /**
+     * [create description]
+     * @param  Psr\Http\Message\RequestInterface \$request
+     * @param  Psr\Http\Message\ResponseInterface \$response
+     * @return mixed
+     */
     public function create(\$request, \$response)
     {
         return \$this->view->render(\$response, "${1:twig-file}.twig");

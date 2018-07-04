@@ -1,5 +1,11 @@
 <snippet>
     <content><![CDATA[
+    /**
+     * [store description]
+     * @param  Psr\Http\Message\RequestInterface \$request
+     * @param  Psr\Http\Message\ResponseInterface \$response
+     * @return mixed
+     */
     public function store(\$request, \$response)
     {
         if (!(new ${1:Request}(\$request))->isValid())
