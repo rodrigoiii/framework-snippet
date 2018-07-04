@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+    public static function _update(\$id, array \$data)
+    {
+        \$${1:model} = static::find(\$id);
+        \$${1:model}->${2:column1} = \$data['${2:column1}'];
+
+        \$has_change = \$${1:model}->isDirty();
+        \$${1:model}->save();
+
+        return \$has_change;
+    }
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>model-update</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework model update</description>
+</snippet>
