@@ -1,0 +1,24 @@
+<snippet>
+    <content><![CDATA[
+\$app->group('/${1:models}', function () {
+    \$this->get('', "${2:Model}Controller:index")->setName('${3:model}.list');
+    \$this->get('/data', "${2:Model}Controller:data")->setName('${3:model}.data');
+
+    \$this->get('/{id:[0-9]+}/show', "${2:Model}Controller:show")->setName('${3:model}.show');
+    \$this->get('/search', "${2:Model}Controller:search")->setName('${3:model}.search');
+
+    \$this->get('/create', "${2:Model}Controller:create")->setName('${3:model}.create');
+    \$this->post('/create', "${2:Model}Controller:store");
+
+    \$this->get('/{id:[0-9]+}/edit', "${2:Model}Controller:edit")->setName('${3:model}.edit');
+    \$this->put('/{id:[0-9]+}/edit', "${2:Model}Controller:update");
+
+    \$this->delete('/{id:[0-9]+}/delete', "${2:Model}Controller:delete")->setName('${3:model}.delete');
+});
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>route-crud</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+    <description>framework route crud</description>
+</snippet>
