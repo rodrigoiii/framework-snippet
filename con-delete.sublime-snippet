@@ -2,8 +2,9 @@
     <content><![CDATA[
 /**
  * [delete description]
- * @param  Psr\Http\Message\ResponseInterface \$response
- * @return mixed
+ *
+ * @param  ResponseInterface \$response
+ * @return ResponseInterface
  */
 public function delete(\$id, \$response)
 {

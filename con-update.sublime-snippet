@@ -2,9 +2,10 @@
     <content><![CDATA[
 /**
  * [update description]
- * @param  Psr\Http\Message\RequestInterface \$request
- * @param  Psr\Http\Message\ResponseInterface \$response
- * @return mixed
+ *
+ * @param  RequestInterface \$request
+ * @param  ResponseInterface \$response
+ * @return ResponseInterface
  */
 public function update(\$id, \$request, \$response)
 {

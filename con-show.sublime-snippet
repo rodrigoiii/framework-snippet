@@ -2,8 +2,9 @@
     <content><![CDATA[
 /**
  * [show description]
- * @param  Psr\Http\Message\ResponseInterface \$response
- * @return mixed
+ *
+ * @param  ResponseInterface \$response
+ * @return ResponseInterface
  */
 public function show(\$id, \$response)
 {
