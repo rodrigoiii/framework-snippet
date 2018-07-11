@@ -3,7 +3,7 @@
 /**
  * [update description]
  *
- * @param  RequestInterface \$request
+ * @param  ServerRequestInterface \$request
  * @param  ResponseInterface \$response
  * @return ResponseInterface
  */
