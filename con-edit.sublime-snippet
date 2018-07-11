@@ -1,21 +1,19 @@
 <snippet>
     <content><![CDATA[
-    /**
-     * [edit description]
-     * @param  Psr\Http\Message\RequestInterface \$request
-     * @param  Psr\Http\Message\ResponseInterface \$response
-     * @param  array \$args
-     * @return mixed
-     */
-    public function edit(\$request, \$response, \$args)
-    {
-        \$${1:model} = ${2:Model}::find(\$args['id']);
-        return \$this->view->render(\$response, "${3:twig-file}.twig", compact('${1:model}'));
-    }
+/**
+ * [edit description]
+ * @param  Psr\Http\Message\ResponseInterface \$response
+ * @return mixed
+ */
+public function edit(\$id, \$response)
+{
+    \$${1:model} = ${2:Model}::find(\$id);
+    return \$this->view->render(\$response, "${3:twig-file}.twig", compact('${1:model}'));
+}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>con-edit</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.php</scope>
     <description>framework controller edit</description>
 </snippet>

@@ -1,32 +1,32 @@
 <snippet>
     <content><![CDATA[
-    public function up()
-    {
-        \$table = \$this->table('${1:table}')
-            ->changeColumn('${2:column1}', 'string');
+public function up()
+{
+    \$table = \$this->table('${1:table}')
+        ->changeColumn('${2:column1}', 'string');
 
-        \$table->save();
-    }
+    \$table->save();
+}
 
-    public function down()
+public function down()
+{
+    \$table_exist = \$this->hasTable('${1:table}');
+    if (\$table_exist)
     {
-        \$table_exist = \$this->hasTable('${1:table}');
-        if (\$table_exist)
+        \$table = \$this->table('${1:table}');
+        \$column_exist = \$table->hasColumn('${2:column1}');
+
+        if (\$column_exist)
         {
-            \$table = \$this->table('${1:table}');
-            \$column_exist = \$table->hasColumn('${2:column1}');
-
-            if (\$column_exist)
-            {
-                \$table->changeColumn('${2:column2}', 'string');
-                \$table->save();
-            }
+            \$table->changeColumn('${2:column2}', 'string');
+            \$table->save();
         }
     }
+}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>db-mcc</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.php</scope>
     <description>framework db migration change column</description>
 </snippet>

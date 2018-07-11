@@ -1,26 +1,26 @@
 <snippet>
     <content><![CDATA[
-    public function up()
-    {
-        \$table = \$this->table('${1:table}')
-            ->addColumn('${2:column1}', 'string')
-            ->addTimestamps();
+public function up()
+{
+    \$table = \$this->table('${1:table}')
+        ->addColumn('${2:column1}', 'string')
+        ->addTimestamps();
 
-        \$table->create();
-    }
+    \$table->create();
+}
 
-    public function down()
+public function down()
+{
+    \$table_exist = \$this->hasTable('${1:table}');
+    if (\$table_exist)
     {
-        \$table_exist = \$this->hasTable('${1:table}');
-        if (\$table_exist)
-        {
-            \$this->dropTable('${1:table}');
-        }
+        \$this->dropTable('${1:table}');
     }
+}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>db-mt</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <scope>source.php</scope>
     <description>framework migration add table</description>
 </snippet>

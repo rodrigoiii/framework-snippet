@@ -32,6 +32,6 @@
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>view-crud-layout</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <!-- <scope>source.python</scope> -->
+    <!-- <scope>source.twig</scope> -->
     <description>framework view crud layout</description>
 </snippet>
