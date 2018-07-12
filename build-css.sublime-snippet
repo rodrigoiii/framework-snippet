@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+<!-- build:css /dist/css/${1:filename}.css -->
+<!-- endbuild -->
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>build:css</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.php</scope> -->
+    <description>framework useref build css</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+    <content><![CDATA[
+const ERROR_TYPE1 = 0;
+const ERROR_TYPE2 = 1;
+
+public static \$defaultTemplates = [
+    self::MODE_DEFAULT => [
+        self::ERROR_TYPE1 => "Error Message 1",
+        self::ERROR_TYPE2 => "Error Message 2",
+    ]
+];
+
+public function chooseTemplate()
+{
+    \$input = \$this->getParam('input');
+
+    \$condition = true; // assume result
+
+    return \$condition ? static::ERROR_TYPE1 : static::ERROR_TYPE2;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>ex-ct</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.php</scope>
+    <description>framework database seed</description>
+</snippet>
