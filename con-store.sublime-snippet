@@ -1,36 +1,31 @@
 <snippet>
     <content><![CDATA[
 /**
- * [store description]
+ * After submitting the form, the ${9:model} info should be save in the database.
  *
- * @param  ServerRequestInterface \$request
- * @param  ResponseInterface \$response
- * @return ResponseInterface
+ * @param  ${1:Request} $_request
+ * @param  Response $response
+ * @return Response
  */
-public function store(\$request, \$response)
+public function store(${1:Request} \$_request, Response \$response)
 {
-    if (!(new ${1:Request}(\$request))->isValid())
-    {
-        return \$response->withRedirect(\$this->router->pathFor('${2:router-fail-redirect}'));
-    }
+    \$input = \$_request->getParams();
 
-    \$input = \$request->getParams();
-
-    \$result = ${3:Model}::create([
-        '${4:column1}' => \$input['${4:column1}']
+    \$result = ${2:Model}::create([
+        '${3:column1}' => \$input['${3:column1}']
     ]);
 
-    flash(\$result instanceof ${3:Model},
-        ['success' => "${5:success message}"],
-        ['danger' => "${6:fail message}"]
+    flash(\$result instanceof ${2:Model},
+        ['success' => "${6:success message}"],
+        ['danger' => "${7:fail message}"]
     );
 
-    return \$response->withRedirect(\$this->router->pathFor('${7:router-redirect}'));
+    return \$response->withRedirect(\$this->router->pathFor('${8:router-redirect}'));
 }
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>con-store</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework controller store</description>
+    <description>skeleton controller store</description>
 </snippet>

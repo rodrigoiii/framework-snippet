@@ -1,5 +1,13 @@
 <snippet>
     <content><![CDATA[
+/**
+ * Update the user info and return if data
+ * were modified.
+ *
+ * @param  integer $id
+ * @param  array $data
+ * @return boolean
+ */
 public static function _update(\$id, array \$data)
 {
     \$${1:model} = static::find(\$id);
@@ -15,5 +23,5 @@ public static function _update(\$id, array \$data)
     <tabTrigger>model-update</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework model update</description>
+    <description>skeleton model update</description>
 </snippet>

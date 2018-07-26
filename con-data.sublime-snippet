@@ -1,13 +1,13 @@
 <snippet>
     <content><![CDATA[
 /**
- * [data description]
+ * Fetch all ${3:models} in database then return it as json.
  *
- * @param  RequestInterface \$request
- * @param  ResponseInterface \$response
+ * @param  Request \$request
+ * @param  Response \$response
  * @return json
  */
-public function data(\$request, \$response)
+public function data(Request \$request, Response \$response)
 {
     \$data = \$request->getParams();
     \$select = DB::table('${1:table}');
@@ -21,5 +21,5 @@ public function data(\$request, \$response)
     <tabTrigger>con-data</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework controller data</description>
+    <description>skeleton controller data</description>
 </snippet>

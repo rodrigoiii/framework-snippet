@@ -13,7 +13,7 @@
 
                 <div class="form-group has-feedback {{ errors ? errors.${4:column1} ? "has-error" : "has-success" }}">
                     <label for="${4:column1}">${5:label}</label>
-                    <input type="text" name="${4:column1}" class="form-control" value="{{ oldInput.${4:column1} }}" autofocus>
+                    <input type="text" name="${4:column1}" class="form-control" value="{{ oldInput.${4:column1} }}" autofocus />
                     {% if errors %}
                     <span class="glyphicon {{ errors.${4:column1} ? "glyphicon-remove" : "glyphicon-ok" }} form-control-feedback"></span>
                     {% endif %}
@@ -34,5 +34,5 @@
     <tabTrigger>view-crud-create</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.twig</scope> -->
-    <description>framework view crud create</description>
+    <description>skeleton view crud create</description>
 </snippet>

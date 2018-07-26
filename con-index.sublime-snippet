@@ -1,12 +1,12 @@
 <snippet>
     <content><![CDATA[
 /**
- * [index description]
+ * Display list of ${2:models}.
  *
- * @param  ResponseInterface \$response
- * @return ResponseInterface
+ * @param  Response \$response
+ * @return Response
  */
-public function index(\$response)
+public function index(Response \$response)
 {
     return \$this->view->render(\$response, "${1:twig-file}.twig");
 }
@@ -15,5 +15,5 @@ public function index(\$response)
     <tabTrigger>con-index</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework controller index</description>
+    <description>skeleton controller index</description>
 </snippet>

@@ -20,5 +20,5 @@ for (\$i = 1; \$i <= \$limit; \$i++)
     <tabTrigger>db-s</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework database seed</description>
+    <description>skeleton database seed</description>
 </snippet>

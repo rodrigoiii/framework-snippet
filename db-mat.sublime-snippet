@@ -1,5 +1,10 @@
 <snippet>
     <content><![CDATA[
+/**
+ * [up description]
+ *
+ * @return void
+ */
 public function up()
 {
     \$table = \$this->table('${1:table}')
@@ -9,6 +14,11 @@ public function up()
     \$table->create();
 }
 
+/**
+ * [down description]
+ *
+ * @return void
+ */
 public function down()
 {
     \$table_exist = \$this->hasTable('${1:table}');
@@ -22,5 +32,5 @@ public function down()
     <tabTrigger>db-mt</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework migration add table</description>
+    <description>skeleton migration add table</description>
 </snippet>

@@ -7,5 +7,5 @@
     <tabTrigger>build:css</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.php</scope> -->
-    <description>framework useref build css</description>
+    <description>skeleton useref build css</description>
 </snippet>

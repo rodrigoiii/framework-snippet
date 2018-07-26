@@ -1,12 +1,13 @@
 <snippet>
     <content><![CDATA[
 /**
- * [edit description]
+ * Display form to edit ${4:model} info.
  *
- * @param  ResponseInterface \$response
- * @return ResponseInterface
+ * @param  integer $id
+ * @param  Response \$response
+ * @return Response
  */
-public function edit(\$id, \$response)
+public function edit(\$id, Response \$response)
 {
     \$${1:model} = ${2:Model}::find(\$id);
     return \$this->view->render(\$response, "${3:twig-file}.twig", compact('${1:model}'));
@@ -16,5 +17,5 @@ public function edit(\$id, \$response)
     <tabTrigger>con-edit</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework controller edit</description>
+    <description>skeleton controller edit</description>
 </snippet>

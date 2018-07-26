@@ -1,12 +1,13 @@
 <snippet>
     <content><![CDATA[
 /**
- * [delete description]
+ * Delete the specific ${5:model}.
  *
- * @param  ResponseInterface \$response
- * @return ResponseInterface
+ * @param  integer $id
+ * @param  Response \$response
+ * @return Response
  */
-public function delete(\$id, \$response)
+public function delete(\$id, Response \$response)
 {
     flash(${1:Model}::destroy(\$id),
         ['success' => "${2:success message}"],
@@ -20,5 +21,5 @@ public function delete(\$id, \$response)
     <tabTrigger>con-delete</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework controller delete</description>
+    <description>skeleton controller delete</description>
 </snippet>

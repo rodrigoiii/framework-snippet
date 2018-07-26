@@ -1,5 +1,10 @@
 <snippet>
     <content><![CDATA[
+/**
+ * [up description]
+ *
+ * @return void
+ */
 public function up()
 {
     \$table = \$this->table('${1:table}')
@@ -8,6 +13,11 @@ public function up()
     \$table->save();
 }
 
+/**
+ * [down description]
+ *
+ * @return void
+ */
 public function down()
 {
     \$table_exist = \$this->hasTable('${1:table}');
@@ -28,5 +38,5 @@ public function down()
     <tabTrigger>db-mcc</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>framework db migration change column</description>
+    <description>skeleton db migration change column</description>
 </snippet>

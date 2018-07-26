@@ -36,6 +36,11 @@
 {% endblock %}
 
 {% block scripts %}
+<script type="text/javascript" src="/node_modules/datatables.net/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="/node_modules/datatables.net-bs/js/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="/node_modules/bootbox/bootbox.js"></script>
+<script type="text/javascript" src="/node_modules/underscore/underscore.js"></script>
+
 <script type="text/javascript">
 \$(document).ready(function() {
     \$('#${3:model}-table').on('click', '.delete-${3:model}', function(event) {
@@ -52,13 +57,14 @@
     \$('#${3:model}-table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: \$.fn.dataTable.pipeline({
+        ajax: {
             url: "{{ path_for('${3:model}.data') }}"
-        }),
+        },
         columns: [
             {data: "id"},
             {data: "${5:column1}"},
             {
+                orderable: false,
                 data: function (row, type, set) {
                     var id = row.id;
 
@@ -87,5 +93,5 @@
     <tabTrigger>view-crud-index</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.twig</scope> -->
-    <description>framework view crud index</description>
+    <description>skeleton view crud index</description>
 </snippet>
