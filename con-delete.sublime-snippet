@@ -3,7 +3,7 @@
 /**
  * Delete the specific ${5:model}.
  *
- * @param  integer $id
+ * @param  integer \$id
  * @param  Response \$response
  * @return Response
  */

@@ -3,8 +3,8 @@
 /**
  * Display the ${4:model} details.
  *
- * @param  integer $id
- * @param  Response $response
+ * @param  integer \$id
+ * @param  Response \$response
  * @return Response
  */
 public function show(\$id, Response \$response)

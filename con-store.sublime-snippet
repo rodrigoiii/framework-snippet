@@ -3,8 +3,8 @@
 /**
  * After submitting the form, the ${9:model} info should be save in the database.
  *
- * @param  ${1:Request} $_request
- * @param  Response $response
+ * @param  ${1:Request} \$_request
+ * @param  Response \$response
  * @return Response
  */
 public function store(${1:Request} \$_request, Response \$response)

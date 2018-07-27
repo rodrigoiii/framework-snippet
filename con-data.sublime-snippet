@@ -10,11 +10,10 @@
 public function data(Request \$request, Response \$response)
 {
     \$data = \$request->getParams();
-    \$select = DB::table('${1:table}');
+    \$query_builder = \DB::table('${1:table}');
     \$columns = ['id', '${2:column}'];
 
-    \$dataTable = new DataTable(\$data, \$select, \$columns);
-    return \$response->withJson(\$dataTable->getResponse());
+    return \$response->withJson(datatable(\$data, \$query_builder, \$columns));
 }
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

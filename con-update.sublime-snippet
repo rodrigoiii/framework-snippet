@@ -3,9 +3,9 @@
 /**
  * After submitting the form, the ${6:model} info should be updated in the database.
  *
- * @param  integer $id
- * @param  ${1:Request} $_request
- * @param  Response $response
+ * @param  integer \$id
+ * @param  ${1:Request} \$_request
+ * @param  Response \$response
  * @return Response
  */
 public function update(\$id, ${1:Request} \$_request, Response \$response)

@@ -3,7 +3,7 @@
 /**
  * Display form to edit ${4:model} info.
  *
- * @param  integer $id
+ * @param  integer \$id
  * @param  Response \$response
  * @return Response
  */

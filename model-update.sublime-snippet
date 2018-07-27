@@ -4,8 +4,8 @@
  * Update the user info and return if data
  * were modified.
  *
- * @param  integer $id
- * @param  array $data
+ * @param  integer \$id
+ * @param  array \$data
  * @return boolean
  */
 public static function _update(\$id, array \$data)
