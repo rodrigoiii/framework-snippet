@@ -24,5 +24,5 @@ public function update(\$id, ${1:Request} \$_request, Response \$response)
     <tabTrigger>con-update</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>skeleton controller update</description>
+    <description>skeleton controller crud update</description>
 </snippet>

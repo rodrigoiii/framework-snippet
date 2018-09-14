@@ -1,1 +1,1 @@
-# Skeleton CRUD Snippet
+# Skeleton Snippet

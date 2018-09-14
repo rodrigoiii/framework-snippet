@@ -1,19 +1,19 @@
 <snippet>
     <content><![CDATA[
 /**
- * Display form to create ${1:model} info.
+ * Display list of ${2:models}.
  *
  * @param  Response \$response
  * @return Response
  */
-public function create(Response \$response)
+public function index(Response \$response)
 {
-    return \$this->view->render(\$response, "${2:twig-file}.twig");
+    return \$this->view->render(\$response, "${1:twig-file}.twig");
 }
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>con-create</tabTrigger>
+    <tabTrigger>con-index</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>skeleton controller create</description>
+    <description>skeleton controller crud index</description>
 </snippet>

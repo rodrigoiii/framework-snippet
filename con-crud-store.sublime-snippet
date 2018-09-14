@@ -27,5 +27,5 @@ public function store(${1:Request} \$_request, Response \$response)
     <tabTrigger>con-store</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <scope>source.php</scope>
-    <description>skeleton controller store</description>
+    <description>skeleton controller crud store</description>
 </snippet>
