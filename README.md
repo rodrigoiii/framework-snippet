@@ -1,1 +1,1 @@
-# Framework snippet
+# Skeleton CRUD Snippet
