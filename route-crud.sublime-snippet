@@ -2,7 +2,7 @@
     <content><![CDATA[
 \$app->group('/${1:models}', function () {
     \$this->get('', ["${2:Model}Controller", "index"])->setName('${3:model}.list');
-    \$this->get('/data', ["${2:Model}Controller", "data"])->setName('${3:model}.data');
+    \$this->get('/data', ["${2:Model}Controller", "data"])->setName('api.${3:model}.data');
 
     \$this->get('/{id:[0-9]+}/show', ["${2:Model}Controller", "show"])->setName('${3:model}.show');
     \$this->get('/search', ["${2:Model}Controller", "search"])->setName('${3:model}.search');

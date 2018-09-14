@@ -58,7 +58,7 @@
         processing: true,
         serverSide: true,
         ajax: {
-            url: "{{ path_for('${3:model}.data') }}"
+            url: "{{ path_for('api.${3:model}.data') }}"
         },
         columns: [
             {data: "id"},
@@ -90,7 +90,7 @@
 {% endblock %}
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-    <tabTrigger>view-crud-index</tabTrigger>
+    <tabTrigger>view-index</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
     <!-- <scope>source.twig</scope> -->
     <description>skeleton view crud index</description>
